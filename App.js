@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image } from 'reac
 import { Feather } from '@expo/vector-icons';
 import Cabecalho from './src/componentes/cabecalho'
 import Pesquisa from './src/componentes/pesquisa';
+import Banner from './src/componentes/banner';
  
 export default function App() {
   const imagem = Math.floor(Math.random() * 4 + 1);
@@ -13,17 +14,8 @@ export default function App() {
             <Cabecalho/>
 
             <Pesquisa/>
-       
 
-      
-     
-         {/* INICIO DO BANNER */}
-        <Text style={styles.textBanner}> Em cartaz </Text>
- 
-        <Image style={styles.imageBanner} source = {require(`./assets/jurassic.jpg`)}/>
-        
-        {/* FIM DO BANNER */}
-     
+            <Banner/>
    
  
     </View>
@@ -38,19 +30,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#141a29',
     alignItems: 'center',
   },
-  imageBanner: {
-    width: '90%',
-    height: 200,
-    marginTop: 15,
-    borderRadius: 10
-  },
- 
-  textBanner: {
-    fontSize: 30,
-    color: 'white',
-    marginTop: 15,
-    marginLeft: -180,
-    fontWeight: 'Bold'
-  }
+  
  
 });
