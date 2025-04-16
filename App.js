@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image, FlatList } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import Cabecalho from './src/componentes/cabecalho'
 import Pesquisa from './src/componentes/pesquisa';
 import Banner from './src/componentes/banner';
-import Filmes from './src/componentes/cardsfilmes';
-import { FlatList } from 'react-native-web';
+import Cardfilmes from './src/componentes/cardsfilmes';
+import DATA from './src/componentes/data/movies'
+
 
 export default function App() {
   const imagem = Math.floor(Math.random() * 4 + 1);
@@ -20,13 +21,17 @@ export default function App() {
       <Banner />
 
       <FlatList
-        data={Filmes}
+
+
+        horizontal={true}
+        data={DATA}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
 
-          <cardfilmes
+          <Cardfilmes
+
             titulo={item.nome}
-            nota={item.nome}
+            nota={item.nota}
             imagem={item.imagem}
 
           />

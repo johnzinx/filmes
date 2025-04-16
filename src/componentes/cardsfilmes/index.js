@@ -3,14 +3,13 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 import styles from "./style";
 
 
-export default function Filmes() {
+export default function cardFilmes({titulo,nota,imagem}) {
     return (
         <>
             <TouchableOpacity style={styles.containerFilmes}>
 
                 <Image style={styles.images} source={{uri:(imagem)}} />
                 <Text style={styles.titulo}>{titulo}</Text>
-
                 <Text style={styles.textNota}>{nota}</Text>
                 
 
