@@ -1,10 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image, FlatList } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import Cabecalho from './src/componentes/cabecalho'
-import Pesquisa from './src/componentes/pesquisa';
-import Banner from './src/componentes/banner';
-import Cardfilmes from './src/componentes/cardsfilmes';
-import DATA from './src/componentes/data/movies'
+
+import Rotas from './src/componentes/rotas'
 
 
 export default function App() {
@@ -14,33 +11,11 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Cabecalho />
+     
 
-      <Pesquisa />
+      <Rotas />
 
-      <Banner />
-
-      <FlatList
-
-
-        horizontal={true}
-        data={DATA}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-
-          <Cardfilmes
-
-            titulo={item.nome}
-            nota={item.nota}
-            imagem={item.imagem}
-
-          />
-
-
-
-        )}
-
-      />
+     
 
 
     </View>
